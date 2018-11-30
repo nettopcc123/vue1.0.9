@@ -2,16 +2,28 @@
 <div id="container">
  <swiper :options="swiperOption" ref="mySwiper">
   <swiper-slide class="swiper-slide games">
-   <img :src="require('./../components/img/banner_h03.jpg')" alt="">
+   <router-link :to="{ name: 'newsMore1', params: { articid: 262}}">
+     <P>杨洋将要接演军旅剧，只是女主角的人选不是太满意</P>
+    <img :src="require('./../components/img/yl1.jpg')" alt="">
+   </router-link>
   </swiper-slide>
   <swiper-slide class="swiper-slide games">
-   <img :src="require('./../components/img/banner_h04.jpg')" alt="">
+   <router-link :to="{ name: 'newsMore1', params: { articid: 272}}">
+     <P>明星最好看部位：杨幂的腿，林志玲的胸，鹿晗的眼睛，杨洋的臀！</P>
+     <img :src="require('./../components/img/yl2.jpg')" alt="">
+   </router-link>
   </swiper-slide>
   <swiper-slide class="swiper-slide games">
-   <img :src="require('./../components/img/banner_h05.jpg')" alt="">
+     <router-link :to="{ name: 'newsMore1', params: { articid: 277}}">
+       <P>粉丝们的宠爱，到底是成就了郑爽，还是害了她？</P>
+     <img :src="require('./../components/img/yl3.jpg')" alt="">
+     </router-link>
   </swiper-slide>
   <swiper-slide class="swiper-slide games">
-   <img :src="require('./../components/img/banner_h06.jpg')" alt="">
+     <router-link :to="{ name: 'newsMore1', params: { articid: 302}}">
+       <P>巩俐，谁给你的胆！</P>
+      <img :src="require('./../components/img/yl4.jpg')" alt="">
+    </router-link>
   </swiper-slide>
   <div class="swiper-pagination" slot="pagination"></div>
   <!-- <div class="swiper-button-prev" slot="button-prev"></div>
@@ -62,5 +74,14 @@ import { swiper, swiperSlide } from 'vue-awesome-swiper'
 img {
  width: 100%;
  height: auto;
+}
+.games{
+  position: relative;
+}
+.games a p{
+  position: absolute;
+  left:0.08rem;
+  bottom:0.08rem;
+  color:#fff;
 }
 </style>
